@@ -1,0 +1,178 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-image: url(/assets/image/wp7631357.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #202020;
+
+}
+
+header {
+    height: 25%;
+}
+
+main {
+    height: 75%;
+}
+
+.headbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.headbar .logo h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.headbar .logo h1, a {
+    transition: 1s linear;
+    cursor: pointer; 
+}
+
+.headbar .logo h1:hover {
+    transform: scaleX(80%);
+    transition: .9s;  
+}
+
+.headbar .logo h1 span:hover, a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 15px #FFF;
+}
+
+.headbar .navbar, a {
+    position: relative;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.headbar .navbar a::after {
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    bottom: -6px;
+    left: 6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .7s;
+}
+
+.headbar .navbar a:hover::after {
+    transform: scaleX(1);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 15px #FFF;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    header {
+        height: 30%;
+    }
+
+    .headbar {
+        flex-direction: column;
+    }
+
+    .headbar .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headbar .logo h1 {
+        font-size: 50px;
+        padding-top: 20px;
+    }
+
+    .headbar .navbar a,
+    .navbar {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    body {
+        background-size: cover;
+    }
+}
+
+/*MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIINNNNNNNNNNNNNNNNN*/
+
+main {
+    display: flex;  
+}
+
+.infomain {
+    display: inline-block
+}
+
+.infomain .text h1 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s,
+               cursor .4s step-end infinite alternate;
+} 
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+main .infomain {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5.5%;
+    padding-left: 7.9%;
+    color: white;
+    font-size: 39px;
+}
+
+.infomain .text p span {
+    color: #46bdd9;
+}
+
+
+
+
