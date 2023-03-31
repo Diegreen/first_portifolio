@@ -1,9 +1,14 @@
+:root {
+    --main-color: rgb(128, 191, 216);
+    --shadow-color: rgb(90, 205, 250);
+    --font: 'Oswald', sans-serif;
+}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: var(--font);
 }
 
 
@@ -11,13 +16,11 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
-    background-image: url(/assets/image/wp7631357.webp);
+    background-image: url(/assets/image/R.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: #202020;
-
 }
 
 header {
@@ -34,43 +37,50 @@ main {
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
-
 }
 
-.headbar .logo h1 {
-    font-size: 50px;
-    color: white;
+.headbar .logo h1 span, h1 {
+    
+    color: var(--main-color);
     text-align: center;
+    font-size: calc(20px + 2.5vw);
 }
 
-.headbar .logo h1, a {
-    transition: 1s linear;
-    cursor: pointer; 
+.headbar .logo h1 span,
+a {
+    transition: .5s linear;
+    cursor: pointer;
+    text-align: end;
 }
 
 .headbar .logo h1:hover {
     transform: scaleX(80%);
-    transition: .9s;  
+    transition: .7s;
 }
 
-.headbar .logo h1 span:hover, a:hover {
-    color: #FFFFFF;
-    text-shadow: 0 0 5px #FFF, 0 0 15px #FFF;
+.headbar .logo h1 span:hover,
+a:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 5px var(--shadow-color), 0 0 15px var(--shadow-color);
 }
 
-.headbar .navbar, a {
+.headbar .navbar,
+a {
     position: relative;
     font-size: 35px;
     text-decoration: none;
-    color: white;
-    margin: 10px;
+    color: rgb(119, 210, 247);
+    display: flex;
+    gap: 30px;
     text-align: center;
+    font-size: calc(14px + 0.9vw);
+    margin-top: 12px;
 }
 
 .headbar .navbar a::after {
     content: "";
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     width: 100%;
     height: 3px;
     border-radius: 5px;
@@ -78,20 +88,16 @@ main {
     left: 6px;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .7s;
+    transition: transform .5s;
 }
 
 .headbar .navbar a:hover::after {
     transform: scaleX(1);
     color: #FFFFFF;
-    text-shadow: 0 0 5px #FFF, 0 0 15px #FFF;
+    text-shadow: 0 0 5px var(--shadow-color), 0 0 15px var(--shadow-color);
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-size: cover;
-    }
-
     header {
         height: 30%;
     }
@@ -104,35 +110,20 @@ main {
         display: flex;
         justify-content: center;
     }
-
-    .headbar .logo h1 {
-        font-size: 50px;
-        padding-top: 20px;
+    
+    .headbar .logo h1 span {
+        font-size: calc(30px + 2.5vw);
     }
 
-    .headbar .navbar a,
-    .navbar {
-        margin-bottom: 20px;
-        font-size: 25px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    body {
-        background-size: cover;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    body {
-        background-size: cover;
+    .headbar .navbar a {
+        font-size: calc(18px + 0.9vw);
     }
 }
 
 /*MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIINNNNNNNNNNNNNNNNN*/
 
 main {
-    display: flex;  
+    display: flex;
 }
 
 .infomain {
@@ -144,8 +135,8 @@ main {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 1.5s,
-               cursor .4s step-end infinite alternate;
-} 
+        cursor .4s step-end infinite alternate;
+}
 
 @keyframes cursor {
     50% {
@@ -160,19 +151,30 @@ main {
 }
 
 main .infomain {
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 5.5%;
-    padding-left: 7.9%;
-    color: white;
-    font-size: 39px;
+    padding-left: 0.9%;
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.infomain .text {
+    width: 100%;
 }
 
 .infomain .text p span {
     color: #46bdd9;
 }
 
+@media only screen and (max-width: 576px) {
+    .infomain .text h1 {
+        max-width: 100%;
+    }
 
-
-
+    .infomain .text {
+        max-width: 100%;
+        font-size: 15px;
+    }
+}
