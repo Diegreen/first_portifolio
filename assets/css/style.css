@@ -164,6 +164,11 @@ main .infomain {
     width: 100%;
 }
 
+.infomain .text h1 {
+    font-size: calc(25px + 0.7vw);
+    transition: 0.5s ease;
+}
+
 .infomain .text p span {
     color: #46bdd9;
 }
@@ -171,10 +176,34 @@ main .infomain {
 @media only screen and (max-width: 576px) {
     .infomain .text h1 {
         max-width: 100%;
+        font-size: calc(15px + 1.0vw);
+        padding-top: 50px;
     }
 
     .infomain .text {
         max-width: 100%;
-        font-size: 15px;
+        font-size: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .infomain .text h1{
+        max-width: 100%;
+        font-size: calc(15px + 1.0vw);
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .infomain .text {
+        position: relative;
+    }
+
+    .infomain .text h1{
+        max-width: 100%;
+        font-size: calc(1.5px + 2.5vw);
+        position: absolute;
+        right: 17.5%;
     }
 }
